@@ -1,0 +1,13 @@
+check-leaks: false
+color: true
+diff: true
+full-trace: true
+reporter: mocha-multi
+reporter-options: '../../packages/mocha=-,dot=-'
+require:
+  - 'ts-node/register'
+  - 'src/serenity.config.ts'
+timeout: 30000
+v8-stack-trace-limit: 100
+spec:
+  - './node_modules/@integration/web-specs/spec/**/*.spec.ts'

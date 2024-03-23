@@ -1,0 +1,54 @@
+{
+  "name": "@examples/protractor-jasmine-todomvc",
+  "version": "3.0.0",
+  "description": "Example implementation of a test suite using Protractor and Jasmine to exercise a Web interface",
+  "author": {
+    "name": "Jan Molak",
+    "email": "jan.molak@smartcodeltd.co.uk",
+    "url": "https://janmolak.com"
+  },
+  "homepage": "https://serenity-js.org",
+  "license": "Apache-2.0",
+  "private": true,
+  "config": {
+    "access": "private"
+  },
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf target",
+    "test:update-serenity": "serenity-bdd update --ignoreSSL",
+    "test:acceptance": "protractor ./protractor.conf.js",
+    "test:report": "serenity-bdd run",
+    "test": "failsafe clean test:update-serenity test:acceptance test:report",
+    "verify": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/serenity-js/serenity-js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/serenity-js/serenity-js/issues"
+  },
+  "engines": {
+    "node": "^14 || ^16 || ^18",
+    "npm": "^6 || ^7 || ^8 || ^9"
+  },
+  "devDependencies": {
+    "@serenity-js/assertions": "^3.0.0",
+    "@serenity-js/console-reporter": "^3.0.0",
+    "@serenity-js/core": "^3.0.0",
+    "@serenity-js/jasmine": "^3.0.0",
+    "@serenity-js/protractor": "^3.0.0",
+    "@serenity-js/rest": "^3.0.0",
+    "@serenity-js/web": "^3.0.0",
+    "@serenity-js/serenity-bdd": "^3.0.0",
+    "@types/chai": "^4.3.4",
+    "@types/jasmine": "^3.10.7",
+    "jasmine": "^3.99.0",
+    "npm-failsafe": "^1.0.0",
+    "protractor": "^7.0.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}

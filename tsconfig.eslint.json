@@ -1,0 +1,14 @@
+{
+  "extends":"./tsconfig.options.json",
+  "include":[
+    "bin/**/*.ts",
+    "packages/**/*.ts",
+    "integration/**/*.ts",
+    "examples/**/*.ts",
+    "documentation/**/*.ts",
+    "documentation/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

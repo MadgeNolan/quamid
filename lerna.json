@@ -1,0 +1,54 @@
+{
+  "lerna": "3.22.1",
+  "loglevel": "verbose",
+  "hoist": true,
+  "strict": true,
+  "useWorkspaces": false,
+  "nohoist": [
+    "@types/jasmine",
+    "@types/mocha",
+    "@types/cucumber",
+    "@cucumber/create-meta",
+    "@cucumber/cucumber",
+    "@cucumber/messages",
+    "@wdio/*",
+    "cucumber",
+    "colors",
+    "express",
+    "jasmine",
+    "mocha",
+    "mocha-multi",
+    "protractor",
+    "selenium-webdriver",
+    "webdriverio"
+  ],
+  "packages": [
+    "documentation/*",
+    "examples/*",
+    "integration/*",
+    "packages/*"
+  ],
+  "version": "3.1.5",
+  "command": {
+    "create": {
+      "homepage": "https://serenity-js.org",
+      "license": "Apache-2.0"
+    },
+    "publish": {
+      "loglevel": "verbose"
+    },
+    "version": {
+      "allowBranch": "main",
+      "conventionalCommits": true,
+      "createRelease": "github",
+      "private": false,
+      "exact": true,
+      "message": "chore(release): %s\n[ci skip]",
+      "loglevel": "verbose"
+    }
+  },
+  "ignoreChanges": [
+    "!packages/**/*.{js,json,md,ts}",
+    "packages/**/spec/**"
+  ]
+}

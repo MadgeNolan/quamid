@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.options.json",
+
+  "compilerOptions": {
+    "lib": ["es2019", "dom"],
+    "outDir": "./lib",
+    "types": [
+      "node",
+      "chai-as-promised"
+    ]
+  },
+
+  "include": [
+    "spec/**/*.ts",
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

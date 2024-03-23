@@ -1,0 +1,19 @@
+{
+  "extends": "../../tsconfig.options.json",
+
+  "compilerOptions": {
+    "outDir": "./lib",
+    "types": [
+      "node",
+      "chai-as-promised"
+    ]
+  },
+
+  "include": [
+    "src/**/*.ts"
+  ],
+  "exclude": [
+    "spec",
+    "node_modules"
+  ]
+}
